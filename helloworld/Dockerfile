@@ -3,7 +3,7 @@ COPY helloworld.go /
 RUN go build -o /helloworld /helloworld.go
 
 # Copy the exe into a smaller base image
-FROM frolvlad/alpine-bash
+FROM alpine-bash
 
 # Install debug tools
 RUN apt-get update && apt-get -y install mtr \
