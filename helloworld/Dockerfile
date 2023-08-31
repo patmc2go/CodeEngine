@@ -15,4 +15,4 @@ traceroute \
 apache2-utils 
 
 #COPY --from=0 /helloworld /helloworld
-CMD ls -lh bin ; ls -lh sbin ; ls -lh usr/bin ; ls -lh usr/sbin ; nc  -vz smba.trafficmanager.net 443 ; ncat --ssl -vz smba.trafficmanager.net 443 ; mtr -r -c 20 smba.trafficmanager.net
+CMD echo "=== ls bin" ; ls -lh bin ; echo "=== ls sbin" ;  ls -lh sbin ; echo "=== ls usr/bin" ;  ls -lh usr/bin ; echo "=== ls usr/sbin" ;  ls -lh usr/sbin ; nc  -vz smba.trafficmanager.net 443 ; ncat --ssl -vz smba.trafficmanager.net 443 ; mtr -r -c 20 smba.trafficmanager.net
