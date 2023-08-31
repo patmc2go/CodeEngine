@@ -1,9 +1,10 @@
-FROM golang:alpine
-COPY helloworld.go /
-RUN go build -o /helloworld /helloworld.go
+#FROM golang:alpine
+FROM node:14
+#COPY helloworld.go /
+#RUN go build -o /helloworld /helloworld.go
 
 # Copy the exe into a smaller base image
-FROM alpine-bash
+#FROM alpine-bash
 
 # Install debug tools
 RUN apt-get update && apt-get -y install mtr \
@@ -13,5 +14,5 @@ dnsutils \
 traceroute \
 apache2-utils 
 
-COPY --from=0 /helloworld /helloworld
-CMD /helloworld
+#COPY --from=0 /helloworld /helloworld
+CMD ls -lh
