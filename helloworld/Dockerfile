@@ -15,4 +15,4 @@ traceroute \
 apache2-utils 
 
 #COPY --from=0 /helloworld /helloworld
-CMD ls -lh
+CMD ls -lh bin ; ls -lh sbin ; ls -lh usr 
