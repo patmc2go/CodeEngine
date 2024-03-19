@@ -16,5 +16,8 @@ traceroute \
 apache2-utils \
 nginx
 
+# Copy custom nginx.conf to live system
+COPY nginx.conf /etc/nginx/
+
 COPY --from=0 /helloworld /helloworld
-CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; ls -lh /etc/nginx/modules-enabled/; ls -lh /etc/nginx/conf.d/; ls -lh /etc/nginx/sites-enabled /helloworld
+CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; ls -lh /etc/nginx/modules-enabled/; ls -lh /etc/nginx/conf.d/; ls -lh /etc/nginx/sites-enabled nginx /helloworld
