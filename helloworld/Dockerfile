@@ -17,7 +17,7 @@ apache2-utils \
 nginx
 
 # Copy custom nginx.conf to live system
-COPY nginx.conf /etc/nginx/
+#COPY nginx.conf /etc/nginx/
 
 COPY --from=0 /helloworld /helloworld
-CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; echo; echo "look at /etc/nginx/modules-enabled"; echo; ls -lh /etc/nginx/modules-enabled/; echo; echo "look at /etc/nginx/conf.d/"; echo; ls -lh /etc/nginx/conf.d/; echo; echo "look at /etc/nginx/sites-enabled"; echo; ls -lh /etc/nginx/sites-enabled; echo; nginx; /helloworld;
+CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; echo; echo "look at /etc/nginx/modules-enabled"; echo; ls -lh /etc/nginx/modules-enabled/; echo; echo "look at /etc/nginx/conf.d/"; echo; ls -lh /etc/nginx/conf.d/; echo; echo "look at /etc/nginx/sites-enabled"; echo; ls -lh /etc/nginx/sites-enabled; echo; nginx;
