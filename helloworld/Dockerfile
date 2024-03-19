@@ -17,4 +17,4 @@ apache2-utils \
 nginx
 
 COPY --from=0 /helloworld /helloworld
-CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; /helloworld
+CMD pwd; ls -lha /etc/nginx/; echo; echo "cat nginx.conf"; echo; cat /etc/nginx/nginx.conf; echo; echo "which nginx"; echo; which nginx; ls -lh /etc/nginx/modules-enabled/; /helloworld
